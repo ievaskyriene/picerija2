@@ -32,13 +32,13 @@ h3 {
   }
 }
 
-.grid_container.header_menu.fixedHeader {
+.header_menu.fixedHeader {
   position: fixed;
   height: 60px;
   width: 100%;
-  box-shadow: 0px 2px 2px;
+  // box-shadow: 0px 2px 2px;
   z-index: 1;
-
-  margin: 0;
-  padding: 0 calc((100% - 1200px) / 2);
+  background-color: white;
+  margin-top: -90px;
+  // padding: 0 calc((100% - 1280px) / 2);
 }

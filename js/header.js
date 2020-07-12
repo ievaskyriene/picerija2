@@ -17,13 +17,20 @@ function renderHeaderMenu(dataHMenu) {
 
 renderHeaderMenu(navigation);
 
+window.addEventListener("scroll", headerScroll);
+
+window.addEventListener("scroll", () => {
+  headerScroll();
+  fixedHeader();
+});
+
 function headerScroll() {
   //einamoji scrolo vieta (aukstis)
   //susidarome sarasa
   let links = [];
   let DOMlinks = document.querySelectorAll(".header_menu > nav a");
 
-  console.log(DOMlinks);
+  // console.log(DOMlinks);
   let headerHeight = document.querySelector(".header_menu").offsetHeight;
 
   let height = window.scrollY + headerHeight;
@@ -72,14 +79,20 @@ function headerScroll() {
 }
 
 function fixedHeader() {
-  let firstHeader = document.querySelector("grid_container.header_menu");
+  let firstHeader = document.querySelector(".header_menu");
 
   let minLogo = document.querySelector(".logo");
   // let headerActive = document.querySelector(`#main_header nav > a.ref.active`)
 
   if (window.scrollY > 200) {
     firstHeader.classList.add("fixedHeader");
-    minLogo.classList.add("logoMin");
+    console.log(document.querySelector(".fixedHeader"));
+    // minLogo.classList.add("logoMin");
+    // let fixedHeaderinsert = document.querySelector("fixedHeader");
+    // console.log(fixedHeaderinsert);
+    // let minLogomin = document.querySelector("logoMin");
+    document.querySelector(".fixedHeader");
+    // .insertAdjacentHTML("afterbegin", " <img src='./img/logo.img'>");
   }
 
   if (window.scrollY <= 200) {
@@ -90,16 +103,3 @@ function fixedHeader() {
   }
   return;
 }
-
-window.addEventListener("scroll", funcScroll);
-
-DOMlinks;
-
-function funcScroll() {
-  return;
-}
-
-window.addEventListener("scroll", () => {
-  headerScroll();
-  fixedHeader();
-});
