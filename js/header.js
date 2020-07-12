@@ -1,40 +1,5 @@
 /** @format */
 
-"use strict";
-
-const navigation = [
-  {
-    ref: "#picos",
-    text: "Picos",
-    class: "ref",
-  },
-  {
-    ref: "#uzkandziai",
-    text: "Užkandžiai",
-    class: "ref",
-  },
-  {
-    ref: "#desertai",
-    text: "Desertai",
-    class: "ref",
-  },
-  {
-    ref: "#gerimai",
-    text: "Gėrimai",
-    class: "ref",
-  },
-  {
-    ref: "#kitos_prekes",
-    text: "Kitos prekės",
-    class: "ref",
-  },
-  {
-    ref: "#kontaktai",
-    text: "Kontaktai",
-    class: "ref",
-  },
-];
-
 function renderHeaderMenu(dataHMenu) {
   if (!Array.isArray(dataHMenu)) {
     return console.error("Reikia Array");
